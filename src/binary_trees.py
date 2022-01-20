@@ -20,6 +20,7 @@ class BSTNode:
                 # move the job of inserting down a level
                 self.left.insert(value)
         else:
+            # the value must go right
             if self.right is None:
                 self.right = new_node
             else:
