@@ -12,7 +12,7 @@ class BSTNode:
         # init new node with value passed in
         new_node = BSTNode(value)
         # find where the value should be in the tree
-        if self.value > value:
+        if value < self.value:
             # check if child exists
             if self.left is None:
                 self.left = new_node
@@ -32,7 +32,7 @@ class BSTNode:
         if self.value == target:
             return self
         # base case not run, call the function again on appropriate child node
-        elif self.value > target:
+        elif target < self.value:
             # we've gotten to the bottom of this path of the tree and the target isn't there
             if self.left is None:
                 return False
